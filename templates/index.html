@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #495057;
+            padding: 0.8rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #6c757d;
+        }
+
+        /* Container Styles */
+        .container {
+            padding: 2rem;
+        }
+        .hidden {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: center;
+        }
+        th {
+            background-color: #e9ecef;
+        }
+
+        /* Video Feed */
+        #video-feed {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            border: 2px solid #495057;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Face Recognition Attendance System</h1>
+    </header>
+    <nav>
+        <a href="#" id="attendance-link">Attendance</a>
+        <a href="#" id="live-feed-link">Live Video Feed</a>
+        <a href="#" id="timetable-link">Timetable</a>
+    </nav>
+    <div class="container">
+        <!-- Attendance Records -->
+        <div id="attendance-section" class="active">
+            <h2>Attendance Records</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Register Number</th>
+                            <th>Time</th>
+                            <th>Day</th>
+                            <th>Date</th>
+                            <th>Period</th>
+                            <th>Subject</th>
+                            <th>Staff</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Live Video Feed -->
+        <div id="live-feed-section" class="hidden">
+            <h2>Live Video Feed</h2>
+            <img id="video-feed" src="/video_feed" alt="Live Video Feed">
+        </div>
+
+        <!-- Timetable -->
+        <div id="timetable-section" class="hidden">
+            <h2>Timetable</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Period</th>
+                            <th>Subject</th>
+                            <th>Staff</th>
+                            <th>Code</th>
+                        </tr>
+                    </thead>
+                    <tbody id="timetable-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const attendanceSection = document.getElementById('attendance-section');
+        const liveFeedSection = document.getElementById('live-feed-section');
+        const timetableSection = document.getElementById('timetable-section');
+        const attendanceBody = document.getElementById('attendance-body');
+        const timetableBody = document.getElementById('timetable-body');
+
+        // Navigation Links
+        document.getElementById('attendance-link').addEventListener('click', () => {
+            showSection('attendance');
+            fetchAttendance();
+        });
+        document.getElementById('live-feed-link').addEventListener('click', () => {
+            showSection('live-feed');
+        });
+        document.getElementById('timetable-link').addEventListener('click', () => {
+            showSection('timetable');
+            fetchTimetable();
+        });
+
+        // Show and Hide Sections
+        function showSection(section) {
+            attendanceSection.classList.add('hidden');
+            liveFeedSection.classList.add('hidden');
+            timetableSection.classList.add('hidden');
+
+            if (section === 'attendance') attendanceSection.classList.remove('hidden');
+            if (section === 'live-feed') liveFeedSection.classList.remove('hidden');
+            if (section === 'timetable') timetableSection.classList.remove('hidden');
+        }
+
+        // Fetch Attendance Records
+        async function fetchAttendance() {
+            try {
+                const response = await fetch('/attendance');
+                const data = await response.json();
+                attendanceBody.innerHTML = data.map(record => `
+                    <tr>
+                        <td>${record['Name']}</td>
+                        <td>${record['Register Number']}</td>
+                        <td>${record['Time']}</td>
+                        <td>${record['Day']}</td>
+                        <td>${record['Date']}</td>
+                        <td>${record['Period']}</td>
+                        <td>${record['Subject']}</td>
+                        <td>${record['Staff']}</td>
+                        <td>${record['Code']}</td>
+                    </tr>
+                `).join('');
+            } catch (error) {
+                alert('Error fetching attendance data!');
+                console.error(error);
+            }
+        }
+
+        // Fetch Timetable Records
+        async function fetchTimetable() {
+            try {
+                const response = await fetch('/timetable'); // Assuming you add this endpoint for timetable
+                const data = await response.json();
+                timetableBody.innerHTML = Object.entries(data).map(([day, periods]) => {
+                    return periods.map(period => `
+                        <tr>
+                            <td>${day}</td>
+                            <td>${period.period}</td>
+                            <td>${period.subject}</td>
+                            <td>${period.staff}</td>
+                            <td>${period.code}</td>
+                        </tr>
+                    `).join('');
+                }).join('');
+            } catch (error) {
+                alert('Error fetching timetable data!');
+                console.error(error);
+            }
+        }
+
+        // Load Attendance by Default
+        fetchAttendance();
+    </script>
+</body>
+</html>

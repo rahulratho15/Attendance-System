@@ -1,0 +1,304 @@
+{
+    "Sunday": [
+      {
+        "period": 1,
+        "subject": "Distributed Computing",
+        "staff": "Mrs. P. Sujitha",
+        "code": "CS3551"
+      },
+      {
+        "period": 2,
+        "subject": "Deep Learning",
+        "staff": "Dr. J. Preethi",
+        "code": "AD3501"
+      },
+      {
+        "period": 3,
+        "subject": "UI and UX Design",
+        "staff": "Ms. R. Venisha",
+        "code": "CCS370"
+      },
+      {
+        "period": 4,
+        "subject": "Data and Information Security",
+        "staff": "Dr. S. V. Manisekaran",
+        "code": "CW3551"
+      },
+      {
+        "period": 5,
+        "subject": "Disaster Risk Reduction and Management",
+        "staff": "Dr. B. Kiruba",
+        "code": "MX3084"
+      },
+      {
+        "period": 6,
+        "subject": "Ethical Hacking",
+        "staff": "Ms. B. S. Revathi",
+        "code": "CCS344"
+      },
+      {
+        "period": 7,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      },
+      {
+        "period": 8,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      }
+    ],
+    "Monday": [
+      {
+        "period": 1,
+        "subject": "UI and UX Design",
+        "staff": "Ms. R. Venisha",
+        "code": "CCS370"
+      },
+      {
+        "period": 2,
+        "subject": "UI and UX Design",
+        "staff": "Ms. R. Venisha",
+        "code": "CCS370"
+      },
+      {
+        "period": 3,
+        "subject": "Disaster Risk Reduction and Management",
+        "staff": "Dr. B. Kiruba",
+        "code": "MX3084"
+      },
+      {
+        "period": 4,
+        "subject": "Data and Information Security",
+        "staff": "Dr. S. V. Manisekaran",
+        "code": "CW3551"
+      },
+      {
+        "period": 5,
+        "subject": "Distributed Computing",
+        "staff": "Mrs. P. Sujitha",
+        "code": "CS3551"
+      },
+      {
+        "period": 6,
+        "subject": "Deep Learning",
+        "staff": "Dr. J. Preethi",
+        "code": "AD3501"
+      },
+      {
+        "period": 7,
+        "subject": "Disaster Risk Reduction and Management",
+        "staff": "Dr. B. Kiruba",
+        "code": "MX3084"
+      },
+      {
+        "period": 8,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      }
+    ],
+    "Tuesday": [
+      {
+        "period": 1,
+        "subject": "Distributed Computing",
+        "staff": "Mrs. P. Sujitha",
+        "code": "CS3551"
+      },
+      {
+        "period": 2,
+        "subject": "Deep Learning",
+        "staff": "Dr. J. Preethi",
+        "code": "AD3501"
+      },
+      {
+        "period": 3,
+        "subject": "UI and UX Design",
+        "staff": "Ms. R. Venisha",
+        "code": "CCS370"
+      },
+      {
+        "period": 4,
+        "subject": "Data and Information Security",
+        "staff": "Dr. S. V. Manisekaran",
+        "code": "CW3551"
+      },
+      {
+        "period": 5,
+        "subject": "Disaster Risk Reduction and Management",
+        "staff": "Dr. B. Kiruba",
+        "code": "MX3084"
+      },
+      {
+        "period": 6,
+        "subject": "Ethical Hacking",
+        "staff": "Ms. B. S. Revathi",
+        "code": "CCS344"
+      },
+      {
+        "period": 7,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      },
+      {
+        "period": 8,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      }
+    ],
+    "Wednesday": [
+      {
+        "period": 1,
+        "subject": "Big Data Analytics",
+        "staff": "Mr. S. Saravanakumar",
+        "code": "CCS334"
+      },
+      {
+        "period": 2,
+        "subject": "Game Development",
+        "staff": "Ms. N. S. Neelaveni",
+        "code": "CCS347"
+      },
+      {
+        "period": 3,
+        "subject": "Data and Information Security",
+        "staff": "Dr. S. V. Manisekaran",
+        "code": "CW3551"
+      },
+      {
+        "period": 4,
+        "subject": "Deep Learning",
+        "staff": "Dr. J. Preethi",
+        "code": "AD3501"
+      },
+      {
+        "period": 5,
+        "subject": "UI and UX Design",
+        "staff": "Ms. R. Venisha",
+        "code": "CCS370"
+      },
+      {
+        "period": 6,
+        "subject": "Engineering Secure Software Systems",
+        "staff": "Ms. R. Jeevitha",
+        "code": "CB3591"
+      },
+      {
+        "period": 7,
+        "subject": "Big Data Analytics",
+        "staff": "Mr. S. Saravanakumar",
+        "code": "CCS334"
+      },
+      {
+        "period": 8,
+        "subject": "Big Data Analytics",
+        "staff": "Mr. S. Saravanakumar",
+        "code": "CCS334"
+      }
+    ],
+    "Thursday": [
+      {
+        "period": 1,
+        "subject": "Naan Mudhalvan",
+        "staff": "N/A",
+        "code": "N/A"
+      },
+      {
+        "period": 2,
+        "subject": "Naan Mudhalvan",
+        "staff": "N/A",
+        "code": "N/A"
+      },
+      {
+        "period": 3,
+        "subject": "Naan Mudhalvan",
+        "staff": "N/A",
+        "code": "N/A"
+      },
+      {
+        "period": 4,
+        "subject": "Naan Mudhalvan",
+        "staff": "N/A",
+        "code": "N/A"
+      },
+      {
+        "period": 5,
+        "subject": "Distributed Computing",
+        "staff": "Mrs. P. Sujitha",
+        "code": "CS3551"
+      },
+      {
+        "period": 6,
+        "subject": "Ethical Hacking",
+        "staff": "Ms. B. S. Revathi",
+        "code": "CCS344"
+      },
+      {
+        "period": 7,
+        "subject": "Ethical Hacking",
+        "staff": "Ms. B. S. Revathi",
+        "code": "CCS344"
+      },
+      {
+        "period": 8,
+        "subject": "Game Development",
+        "staff": "Ms. N. S. Neelaveni",
+        "code": "CCS347"
+      }
+    ],
+    "Friday": [
+      {
+        "period": 1,
+        "subject": "Game Development",
+        "staff": "Ms. N. S. Neelaveni",
+        "code": "CCS347"
+      },
+      {
+        "period": 2,
+        "subject": "Game Development",
+        "staff": "Ms. N. S. Neelaveni",
+        "code": "CCS347"
+      },
+      {
+        "period": 3,
+        "subject": "Ethical Hacking",
+        "staff": "Ms. B. S. Revathi",
+        "code": "CCS344"
+      },
+      {
+        "period": 4,
+        "subject": "Big Data Analytics",
+        "staff": "Mr. S. Saravanakumar",
+        "code": "CCS334"
+      },
+      {
+        "period": 5,
+        "subject": "Deep Learning Lab",
+        "staff": "Dr. J. Preethi & Dr. N. Fareena",
+        "code": "AD3511"
+      },
+      {
+        "period": 6,
+        "subject": "Deep Learning Lab",
+        "staff": "Dr. J. Preethi & Dr. N. Fareena",
+        "code": "AD3511"
+      },
+      {
+        "period": 5,
+        "subject": "Deep Learning Lab",
+        "staff": "Dr. J. Preethi & Dr. N. Fareena",
+        "code": "AD3511"
+      },
+      {
+        "period": 6,
+        "subject": "Deep Learning Lab",
+        "staff": "Dr. J. Preethi & Dr. N. Fareena",
+        "code": "AD3511"
+      }
+    ]
+}
+      
+  
